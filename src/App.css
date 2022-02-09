@@ -37,17 +37,19 @@
     transform: rotate(360deg);
   }
 }
+
+/* started from here */
+
 body{
   height:100vh;
   background-image: 
   radial-gradient(ellipse farthest-corner at 40% 40%, rgba(1,8,8,1) 76%, rgba(0,212,255,1) 97%);
+  /* background: rgb(17,17,17);
+background: linear-gradient(45deg, rgba(17,17,17,1) 0%, rgba(1,8,8,1) 74%, rgba(0,212,255,1) 97%); */
   color: white;
-  width: 200px;
   border-radius: 10px;
   margin-top: 50px;
   display: block;
-  text-align: center;
-  line-height: 50px;
   animation: bg-change 10s infinite alternate;
   background-size: 400%;
 }
@@ -59,4 +61,20 @@ body{
   100%{
     background-position: right;
   }
+}
+
+/* color:#00d4ff */
+
+#general{
+  display:flex;
+  width:75%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+#littledesc{
+  /* border: 1px solid red; */
+  margin-top: 200px;
+  margin-left: 50px;
+  width: 60%;
 }

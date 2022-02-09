@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Jumpingtext=styled.h1`
-    color:black;
+    color:white;
     padding-right:15px;
-    display:table-cell;
+    display:block;
     /* display:inline-block; */
 
     &:hover{
