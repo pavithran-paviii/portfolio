@@ -10,7 +10,7 @@ display:block;
     font-weight: 700;
     letter-spacing: 5px;
     position: relative;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     font-size:20px;
 
