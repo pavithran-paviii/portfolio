@@ -1,12 +1,9 @@
 import styled from "styled-components"
 
 const Div=styled.div`
-    /* display:flex; */
     margin:auto;
-    width:55%;
-    /* border:1px solid red; */
-    margin-top:150px;
-    margin-bottom:50px;
+    width:70%;
+    margin-bottom: 30px;
 `
 
 const Ul=styled.ul`
@@ -14,7 +11,7 @@ const Ul=styled.ul`
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
     list-style: none;
-    line-height:1.5;
+    line-height:2.5;
 
     &>li:before{
         content: "▹";
@@ -27,70 +24,74 @@ const Ul=styled.ul`
 
 const Centreddiv=styled.div`
     margin:auto;
-    margin-bottom:30px;
-    width:55%;
-    /* border:1px solid red; */
+    width:70%;   
     display:flex;
-    /* grid-area: 1 / 6 / -1 / -1; */
+    gap: 10px;
+    margin:10px auto;
 
     &>img{
-        /* width:55%; */
-        border:1px solid green;
-        opacity:0.25
-        /* position: relative;
-        z-index:1;
-        grid-column: 1 / 8; */
+        width:65%;
+        opacity:0.25;
+        border-radius: 3px;
     }
     &>img:hover{
         opacity:1;
-        /* transition: width 0.2s, height 0.2s; */
-        /* transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1); */
     }
     &>div{
-        position: relative;
-        z-index:2;
-        width:55%
-        border:1px solid blue;
+        width:50%;
+        &>:first-child{
+            font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+        }
+        &>:nth-child(2){
+            background-color: rgba(0,212,255,1);
+            border-radius: 3px;
+            padding: 5px;
+            opacity: 0.7;
+            min-height: 70px;
+            align-content: center;
+        }
+        &>:nth-child(3){
+            font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+        }
+        & svg{
+            font-size: 20px;
+        }
     }
 `
 
 const Greentext=styled.span`
     color:rgba(0,212,255,1);
     margin-right:10px;
-    font-size:20px;
+    font-size:25px;
     font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
     padding-top: 5px;
-    /* border:1px solid red; */
+    
 `
 const Topicname=styled.span`
-    color:#ccd6f6;
-    margin-right:10px;
+    color:white;
+    margin-right:20px;
     font-size:25px;
-    /* font-family:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace; */
-    font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 
     &>div:hover{
         color:rgba(0,212,255,1);
     }
 `
-const Para=styled.p`
+const Para=styled.h4`
     line-height: 1.5;
     letter-spacing: 1px;
-    border:1px solid red;
     width:55%;
     margin:auto;
     text-align:left;
     margin-top:10px;
-    font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
 `
 
 const Leftalign=styled.div`
     text-align:left;
-    /* border:1px solid red; */
 `
 const Centeralign=styled.div`
     text-align:center;
-    /* border:1px solid red; */
     margin:auto;
     display:block;
     margin-bottom:15px;
@@ -102,7 +103,6 @@ const Centeralign=styled.div`
 `
 const Rightalign=styled.div`
     text-align:right;
-    /* border:1px solid red; */
     position:relative;
     right:0;
     z-index:2;
@@ -113,11 +113,22 @@ const Rightalign=styled.div`
         position:absolute;
     }
 `
-const Projectts=styled.div`
+const Projectts=styled.span`
     display: flex;
     grid-template-columns: repeat(5, minmax(0px, 1fr));
     grid-gap:20px;
-    margin-top:10px
+    margin-top:20px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 10px;
+
+    &>a{
+        color: inherit;
+        text-decoration: none;
+    }
+    &>a:hover{
+        color:rgba(0,212,255,1);
+    }
 `
 
 export {Div,Greentext,Topicname,Para,Centreddiv,Ul,Rightalign,Leftalign,Projectts,Centeralign}

@@ -1,7 +1,8 @@
 import { Greentext,Topicname,Div,Centreddiv,Ul } from "./topicsheading"
 
 export const Skills=()=>{
-    return <div>
+    return <div id="skills">
+        <div>
         <Div>
             <Greentext>02.</Greentext>
             <Topicname>Skills</Topicname>
@@ -11,12 +12,12 @@ export const Skills=()=>{
         </Centreddiv>
         <Centreddiv>
             <Ul>
-                <li>HTMl</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>React</li>
-                <li>Redux</li>
-                <li>MUI</li>
+                <li>HTMl <i class="devicon-html5-plain" id="devicon"></i></li>
+                <li>CSS <i class="devicon-css3-plain" id="devicon"></i></li>
+                <li>JS <i class="devicon-javascript-plain" id="devicon"></i></li>
+                <li>React <i class="devicon-react-original" id="devicon"></i></li>
+                <li>Redux <i class="devicon-redux-original" id="devicon"></i></li>
+                <li>MUI <i class="devicon-materialui-plain"></i></li>
             </Ul>
         </Centreddiv>
         <Centreddiv>
@@ -24,10 +25,10 @@ export const Skills=()=>{
         </Centreddiv>
         <Centreddiv>
             <Ul>
-                <li>Node JS</li>
-                <li>Mongo DB</li>
-                <li>Express JS</li>
-                <li>Postman</li>
+                <li>Node JS <i class="devicon-nodejs-plain-wordmark" id="devicon"></i></li>
+                <li>Mongo DB <i class="devicon-mongodb-plain" id="devicon"></i></li>
+                <li>Express JS <i class="devicon-express-original" id="devicon"></i></li>
+                <li>Postman <i class="devicon-adonisjs-original" id="devicon"></i></li>
             </Ul>
         </Centreddiv>
         <Centreddiv>
@@ -43,8 +44,9 @@ export const Skills=()=>{
         </Centreddiv>
         <Centreddiv>
             <Ul>
-                <li>GIT</li>
+                <li>GIT <i class="devicon-git-plain-wordmark" id="devicon"></i></li>
             </Ul>
         </Centreddiv>
+        </div>
     </div>
 }

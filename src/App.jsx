@@ -1,9 +1,6 @@
 import './App.css';
-import { Jumpingtext } from './components/jumpingtext';
-import Button from "@mui/material/Button"
+// import Button from "@mui/material/Button"
 import { Navbar } from './components/navbar';
-import profileimage from "./images/profileimage.png"
-import { Starbg } from './components/startbg';
 import { Sidebar } from './components/sidebar';
 import MouseParticles from "react-mouse-particles"
 import { Skills } from './components/skills';
@@ -16,40 +13,36 @@ import GoogleIcon from '@mui/icons-material/Google';
 import { Aboutus } from './components/aboutus';
 import { Projects } from './components/projects';
 import { Contact } from './components/contact';
+import { Greentext } from './components/topicsheading';
+import { General } from './components/general';
+
 //icons end
 function App() {
   return (
     <div className="App">
-      <MouseParticles g={.2} color="rgba(0,212,255,1)" cull="col,image-wrapper"/>
+     <MouseParticles g={.2} color="black" cull="col,image-wrapper"/>
+     <div id="navbar">
       <Navbar>
-      <Button variant="text">About</Button>
-      <Button variant="text">Skills</Button>
-      <Button variant="text">Projects</Button>
-      <Button variant="text">Contact</Button>
-      </Navbar>
+          <Greentext><a href="#aboutus">01.About</a></Greentext>
+          <Greentext><a href="#skills">02.Skills</a></Greentext>
+          <Greentext><a href="#projects">03.Projects</a></Greentext>
+          <Greentext><a href="#contactus">04.Contact</a></Greentext>
+        </Navbar>
+     </div>
       <Sidebar>
-          <GitHubIcon/>
-          <InstagramIcon/>
-          <TwitterIcon/>
-          <LinkedInIcon/>
-          <GoogleIcon/>
+          <a href="https://github.com/pavithran-paviii" target={"_blank"} rel="noreferrer"><GitHubIcon/></a>
+          <a href="https://www.instagram.com/pavithran_paviii/" target={"_blank"} rel="noreferrer"><InstagramIcon/></a>
+          <a href="https://twitter.com/pavithranr65" target={"_blank"} rel="noreferrer"><TwitterIcon/></a>
+          <a href="https://www.linkedin.com/in/pavithranpavi/" target={"_blank"} rel="noreferrer"><LinkedInIcon/></a>
+          <a href="mailto:pavithranr65@gmail.com" target={"_blank"} rel="noreferrer"><GoogleIcon/></a>
       </Sidebar>
-      <div id="general">
-        <div>
-        <Starbg src={profileimage}></Starbg>
-        </div>
-        <div id="littledesc">
-          <div>
-            <Jumpingtext>HI I'M PAVITHRAN...</Jumpingtext>
-            <Jumpingtext>FULL STACK WEB DEVELOPER</Jumpingtext>
-          </div>
-        </div>
+      <div class="section">
+        <General/>
+        <Aboutus />
+        <Skills />
+        <Projects />
+        <Contact />
       </div>
-      {/* <KeyboardArrowDownIcon/> */}
-      <Aboutus/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
     </div>
   );
 }

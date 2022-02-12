@@ -1,21 +1,24 @@
 import { Div, Greentext,Topicname,Centreddiv,Rightalign, Leftalign,Projectts} from "./topicsheading"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
+import practo from "../images/practo-pic.png"
+import interntheory from "../images/Interntheory.png"
 
 export const Projects=()=>{
-    return <div>
+    return <div id="projects">
+        <div>
         <Div>
             <Greentext>03.</Greentext>
             <Topicname>Projects</Topicname>
         </Div>
         <Centreddiv>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn2bBWGlQ8o6yN3XJQxyy_2ppUao9-jFR0fg&usqp=CAU" alt="" />
+            <img src={practo} alt="" onClick={redirect} />
             <Rightalign>
                 <Topicname>
                     <div>Practo-clone</div>
                 </Topicname>
                 <Rightalign>
-                    A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+                     A Medical Application to book consultations, order tests, and buy medicines online. 
                 </Rightalign>
                 <Projectts>
                     <div>HTML</div>
@@ -24,8 +27,8 @@ export const Projects=()=>{
                 </Projectts>
                 <div>
                 <Projectts>
-                    <GitHubIcon/>
-                    <InsertLinkIcon/>
+                    <a href="https://github.com/Vaman93/Practo-Clone" target={"_blank"} rel="noreferrer"><GitHubIcon/></a>
+                    <a href="https://practoclone.netlify.app/" target={"_blank"} rel="noreferrer"><InsertLinkIcon/></a>
                 </Projectts>
                 </div>
             </Rightalign>
@@ -33,18 +36,31 @@ export const Projects=()=>{
         <Centreddiv>
             <Leftalign>
                 <Topicname>
-                    <div>Practo-clone</div>
+                    <div>Intern Theory</div>
                 </Topicname>
                 <Leftalign>
-                    A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+                A Website that helps students find & apply for Internships all around India.
                 </Leftalign>
                 <Projectts>
                 <div>HTML</div>
                 <div>CSS</div>
                 <div>JS</div>
+                <div>Express</div>
+                <div>Mongo DB</div>
             </Projectts>
+            <div>
+                <Projectts>
+                    <a href="https://github.com/pavithran-paviii/Intern-Theory-Clone" target={"_blank"} rel="noreferrer"><GitHubIcon/></a>
+                    <a href="https://practoclone.netlify.app/" target={"_blank"} rel="noreferrer"><InsertLinkIcon/></a>
+                </Projectts>
+                </div>
             </Leftalign>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn2bBWGlQ8o6yN3XJQxyy_2ppUao9-jFR0fg&usqp=CAU" alt="" />
+            <img src={interntheory} alt="" />
         </Centreddiv>
+        </div>
     </div>
+}
+
+function redirect(){
+    window.open("https://practoclone.netlify.app/")
 }
