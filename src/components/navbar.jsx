@@ -17,7 +17,7 @@ export const Navbar=styled.div`
 
     & span{
         color:white;
-        font-size: 20px;
+        font-size: 18px;
     }
     & span:hover{
         color:rgba(0,212,255,1);

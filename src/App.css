@@ -94,8 +94,10 @@ body{
 #skills>div{
   width: 80%;
   margin: auto;
- 
   justify-content: center;
+}
+#skills>div>div{
+  border: none;
 }
 #projects{
  
@@ -174,4 +176,11 @@ body{
   width:100vw;
   height: calc(100vh - 70px);
   scroll-snap-align: start;
+}
+
+#resumeButton{
+  background-color: transparent;
+    border: 1px solid white;
+    border-radius:4px;
+    padding: 5px;
 }

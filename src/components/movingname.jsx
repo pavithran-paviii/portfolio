@@ -4,7 +4,6 @@ export const Movingname=styled.div`
 display:block;
     animation: shine 8s linear infinite;
     background: linear-gradient(90deg,#000,#fff,#000);
-    -webkit-background-clip: text;
     background-repeat: no-repeat;
     background-size: 80%;
     font-weight: 700;

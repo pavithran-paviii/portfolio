@@ -28,6 +28,9 @@ const Centreddiv=styled.div`
     display:flex;
     gap: 10px;
     margin:10px auto;
+    margin-bottom: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
 
     &>img{
         width:65%;
@@ -130,5 +133,4 @@ const Projectts=styled.span`
         color:rgba(0,212,255,1);
     }
 `
-
 export {Div,Greentext,Topicname,Para,Centreddiv,Ul,Rightalign,Leftalign,Projectts,Centeralign}

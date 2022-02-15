@@ -19,9 +19,8 @@ export const Contact=()=>{
                 To contact me feel free to use the handles at the left.
             </Centeralign>
         </Div>
-        {/* Add googlemaps here */}
         <div>
-           <img src={map2}></img>
+           <img src={map2} alt="mydistrictmap"></img>
         </div>
         </div>
         <div>
