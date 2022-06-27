@@ -22,7 +22,7 @@ export const projectData = [
       " A Medical Application to book consultations, order tests, and buy medicines online. ",
     techstacks: ["HTML", "CSS", "JavaScript"],
     githubLink: "https://github.com/pavithran-paviii/Practo-Clone",
-    deployedLink: "https://practoclone.netlify.app/",
+    deployedLink: "https://practo-project.netlify.app/",
     imageLink: "https://i.ibb.co/cF8W40Y/practo.png",
   },
   {
