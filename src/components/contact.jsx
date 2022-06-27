@@ -19,9 +19,9 @@ export const Contact=()=>{
                 To contact me feel free to use the handles at the left.
             </Centeralign>
         </Div>
-        <div>
+        {/* <div>
            <img src={map2} alt="mydistrictmap"></img>
-        </div>
+        </div> */}
         </div>
         <div>
         <Centeralign>

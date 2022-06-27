@@ -1,66 +1,77 @@
-import { Div, Greentext,Topicname,Centreddiv,Rightalign, Leftalign,Projectts} from "./topicsheading"
-import GitHubIcon from '@mui/icons-material/GitHub';
-import InsertLinkIcon from '@mui/icons-material/InsertLink';
-import practo from "../images/practo-pic.png"
-import interntheory from "../images/Interntheory.png"
+import {
+  Div,
+  Greentext,
+  Topicname,
+  Centreddiv,
+  Rightalign,
+  Leftalign,
+  Projectts,
+} from "./topicsheading";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InsertLinkIcon from "@mui/icons-material/InsertLink";
+import { projectData } from "../data/projectData.js";
 
-export const Projects=()=>{
-    return <div id="projects">
-        <div>
+export const Projects = () => {
+  console.log(projectData);
+  return (
+    <div id="projects">
+      <div>
         <Div>
-            <Greentext>03.</Greentext>
-            <Topicname>Projects</Topicname>
+          <Greentext>03.</Greentext>
+          <Topicname>Projects</Topicname>
         </Div>
-        <Centreddiv>
-            <img src={practo} alt="" onClick={redirect} />
-            <Rightalign>
-                <Topicname>
-                    <div>Practo-clone</div>
-                </Topicname>
+        <div id="projectsFlexDiv">
+          {projectData.map((project) => {
+            return (
+              <Centreddiv key={project.name}>
+                <img
+                  src={project.imageLink}
+                  alt={project.name}
+                  onClick={(e) => redirect(e)}
+                />
                 <Rightalign>
-                     A Medical Application to book consultations, order tests, and buy medicines online. 
+                  <Topicname>
+                    <div>{project.name}</div>
+                  </Topicname>
+                  <Rightalign>{project.description}</Rightalign>
+                  <Projectts>
+                    {project.techstacks.map((tech) => {
+                      return <div key={tech}>{tech}</div>;
+                    })}
+                  </Projectts>
+                  <div>
+                    <Projectts>
+                      <a
+                        href={project.githubLink}
+                        target={"_blank"}
+                        rel="noreferrer"
+                      >
+                        <GitHubIcon />
+                      </a>
+                      <a
+                        href={project.deployedLink}
+                        target={"_blank"}
+                        rel="noreferrer"
+                      >
+                        <InsertLinkIcon />
+                      </a>
+                    </Projectts>
+                  </div>
                 </Rightalign>
-                <Projectts>
-                    <div>HTML</div>
-                    <div>CSS</div>
-                    <div>JS</div>
-                </Projectts>
-                <div>
-                <Projectts>
-                    <a href="https://github.com/Vaman93/Practo-Clone" target={"_blank"} rel="noreferrer"><GitHubIcon/></a>
-                    <a href="https://practoclone.netlify.app/" target={"_blank"} rel="noreferrer"><InsertLinkIcon/></a>
-                </Projectts>
-                </div>
-            </Rightalign>
-        </Centreddiv>
-        <Centreddiv>
-            <Leftalign>
-                <Topicname>
-                    <div>Intern Theory</div>
-                </Topicname>
-                <Leftalign>
-                A Website that helps students find & apply for Internships all around India.
-                </Leftalign>
-                <Projectts>
-                <div>HTML</div>
-                <div>CSS</div>
-                <div>JS</div>
-                <div>Express</div>
-                <div>Mongo DB</div>
-            </Projectts>
-            <div>
-                <Projectts>
-                    <a href="https://github.com/pavithran-paviii/Intern-Theory-Clone" target={"_blank"} rel="noreferrer"><GitHubIcon/></a>
-                    <a href="https://practoclone.netlify.app/" target={"_blank"} rel="noreferrer"><InsertLinkIcon/></a>
-                </Projectts>
-                </div>
-            </Leftalign>
-            <img src={interntheory} alt="" />
-        </Centreddiv>
+              </Centreddiv>
+            );
+          })}
         </div>
+      </div>
     </div>
-}
+  );
+};
 
-function redirect(){
-    window.open("https://practoclone.netlify.app/")
+function redirect(event) {
+  const value = event.target.alt;
+  var val = projectData.filter((project) => {
+    return project.name.includes(value);
+  });
+  // console.log(val[0].deployedLink);
+  window.open(val[0].deployedLink);
 }

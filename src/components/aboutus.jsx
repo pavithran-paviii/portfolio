@@ -6,9 +6,6 @@ export const Aboutus=()=>{
             <Div>
                 <Greentext>01.</Greentext>
                 <Topicname id="topicname">About Me</Topicname>
-                {/* <div class="line">
-                    <span></span>
-                </div> */}
             </Div>
             <Para>
             I'm a Full Stack Web Developer located in Paramakudi, India. I enjoy creating things that live on the internet. My interest in web development started back in childhood. Well-organized person, problem solver with high attention to detail.
