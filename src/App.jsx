@@ -79,7 +79,7 @@ function App() {
       <RightSidebar>
         <div className="rightSideLine rightLine1"></div>
         <a
-          href="https://drive.google.com/file/d/1IWp8E4x6izT8cvqab1XICinE_uq6el7V/view?usp=sharing"
+          href="https://drive.google.com/file/d/1sUPiDvB9uu1EpY0ULMpCQWmWztpilIZY/view?usp=share_link"
           target={"_blank"}
           rel="noreferrer"
         >
